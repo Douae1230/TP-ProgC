@@ -33,3 +33,5 @@ int main() {
 
     /* Pour float/double/long double, on copie les bits dans un entier pour afficher en hex */
     unsigned int fi;
+}
+
