@@ -1,32 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    printf("Taille des types de base sur cette machine :\n\n");
+    printf("Tailles des types de données et pointeurs sur cette machine :\n\n");
 
     /* Types de base */
-    printf("sizeof(int) = %zu octets\n", sizeof(int));
-    printf("sizeof(char) = %zu octets\n", sizeof(char));
-    printf("sizeof(float) = %zu octets\n", sizeof(float));
-    printf("sizeof(double) = %zu octets\n", sizeof(double));
-    printf("sizeof(long) = %zu octets\n", sizeof(long));
-    printf("sizeof(long long) = %zu octets\n", sizeof(long long));
-    printf("sizeof(long double) = %zu octets\n", sizeof(long double));
+    printf("La taille de int est : %zu octets\n", sizeof(int));
+    printf("La taille de char est : %zu octets\n", sizeof(char));
+    printf("La taille de float est : %zu octets\n", sizeof(float));
+    printf("La taille de double est : %zu octets\n", sizeof(double));
+    printf("La taille de long est : %zu octets\n", sizeof(long));
+    printf("La taille de long long est : %zu octets\n", sizeof(long long));
+    printf("La taille de long double est : %zu octets\n", sizeof(long double));
 
     /* Pointeurs simples */
-    printf("\nPointeurs :\n");
-    printf("sizeof(int*) = %zu octets\n", sizeof(int*));
-    printf("sizeof(char*) = %zu octets\n", sizeof(char*));
-    printf("sizeof(float*) = %zu octets\n", sizeof(float*));
-    printf("sizeof(double*) = %zu octets\n", sizeof(double*));
-
-    /* Pointeurs multiples */
-    printf("\nPointeurs multiples :\n");
-    printf("sizeof(int**) = %zu octets\n", sizeof(int**));
-    printf("sizeof(char**) = %zu octets\n", sizeof(char**));
-    printf("sizeof(float**) = %zu octets\n", sizeof(float**));
-    printf("sizeof(double**) = %zu octets\n", sizeof(double**));
-    printf("sizeof(int***) = %zu octets\n", sizeof(int***));
-    printf("sizeof(char***) = %zu octets\n", sizeof(char***));
+    printf("\nPointeurs simples :\n");
+    printf("La taille de int* est : %zu octets\n", sizeof(int*));
+    printf("La taille de int** est : %zu octets\n", sizeof(int**));
+    printf("La taille de char* est : %zu octets\n", sizeof(char*));
+    printf("La taille de char** est : %zu octets\n", sizeof(char**));
+    printf("La taille de char*** est : %zu octets\n", sizeof(char***));
+    printf("La taille de float* est : %zu octets\n", sizeof(float*));
+    printf("La taille de float** est : %zu octets\n", sizeof(float**));
+    printf("La taille de float*** est : %zu octets\n", sizeof(float***));
 
     return 0;
 }
+
+
