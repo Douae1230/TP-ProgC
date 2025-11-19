@@ -1,41 +1,34 @@
 #include <stdio.h>
 
-int main(void) {
-    int compteur = 5; // Tu peux tester avec d'autres valeurs (ex : 3, 7, 9)
+int main() {
+    int n = 5;      /* Hauteur de la pyramide */
+    int i, j;
 
-    if (compteur >= 10) {
-        printf("Erreur : compteur doit être strictement inférieur à 10.\n");
-        return 1;
-    }
+    printf("Generation d'une pyramide de hauteur %d :\n\n", n);
 
-    printf("=== Triangle avec boucles for ===\n");
+    /* Boucle sur chaque niveau de 1 a n */
+    for (i = 1; i <= n; i++) {
 
-    // Boucle externe : lignes du triangle
-    for (int i = 1; i <= compteur; i++) {
-
-        // Boucle interne : caractères sur chaque ligne
-        for (int j = 1; j <= i; j++) {
-
-            // Règles d’affichage selon la ligne
-            if (i == 1 || i == 2) {
-                printf("* ");
-            } else if (i == 3) {
-                if (j == 2)
-                    printf("# ");
-                else
-                    printf("* ");
-            } else if (i == 4) {
-                if (j == 2 || j == 3)
-                    printf("# ");
-                else
-                    printf("* ");
-            } else {
-                printf("* ");
-            }
+        /* Affichage des espaces pour centrer la pyramide */
+        for (j = 1; j <= n - i; j++) {
+            printf(" ");
         }
 
-        printf("\n"); // Saut de ligne après chaque ligne du triangle
+        /* Affichage des nombres croissants : 1, 2, ..., i */
+        for (j = 1; j <= i; j++) {
+            printf("%d", j);
+        }
+
+        /* Affichage des nombres decroissants : i-1, ..., 1 */
+        for (j = i - 1; j >= 1; j--) {
+            printf("%d", j);
+        }
+
+        /* Passage a la ligne suivante */
+        printf("\n");
     }
+
+    printf("\nPyramide complete.\n");
 
     return 0;
 }
